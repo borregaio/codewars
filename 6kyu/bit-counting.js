@@ -18,3 +18,6 @@ function countBits(n) {
 
 // Test the function with an example
 console.log(countBits(1234)); // Output should be 5
+
+
+countBits = n => n.toString(2).split('0').join('').length;
