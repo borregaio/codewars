@@ -5,14 +5,12 @@
 function countBits(n) {
     let count = 0;
     
-    // Convert the integer to its binary representation and iterate through each bit
-    while (n > 0) {
+    // Iterate through each bit of the binary representation
+    for (let i = n; i > 0; i = Math.floor(i / 2)) {
         // Check if the rightmost bit is 1
-        if (n & 1) {
+        if (i % 2 === 1) {
             count++;
         }
-        // Right shift the number by 1 bit to check the next bit
-        n >>= 1;
     }
     
     return count;
